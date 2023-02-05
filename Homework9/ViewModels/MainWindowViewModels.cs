@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Base.ViewModels
+namespace Homework10.ViewModels
 {
     class MainWindowViewModels
     {
