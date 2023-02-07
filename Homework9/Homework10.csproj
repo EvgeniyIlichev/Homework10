@@ -7,9 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Workers\" />
+    <Compile Remove="Models\Workers\**" />
+    <EmbeddedResource Remove="Models\Workers\**" />
+    <None Remove="Models\Workers\**" />
+    <Page Remove="Models\Workers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Homework10Console\Homework10Console.csproj" />
   </ItemGroup>
 
 </Project>
