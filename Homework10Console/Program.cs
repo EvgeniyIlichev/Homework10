@@ -17,7 +17,10 @@ namespace Homework10Console
 
             Console.WriteLine(baseClients.ToString());
 
-            DataSaveJson.SerializeOrganizationJson();
+            DataSaveJson.SerializeBaseJson();
+            DataLoadJson.DeserializeBaseJson();
+
+            Console.WriteLine(baseClients.ToString());
 
             Console.ReadLine();
 

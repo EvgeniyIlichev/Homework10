@@ -11,7 +11,7 @@ namespace Homework10Console.Infrasructure
 {
     internal class DataSaveJson : BaseClients 
     {
-        public static void SerializeOrganizationJson()
+        public static void SerializeBaseJson()
         {
             string baseJson = JsonConvert.SerializeObject(_base);
             string json = baseJson;
