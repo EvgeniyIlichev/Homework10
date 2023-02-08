@@ -9,9 +9,7 @@ namespace Homework10Console.Clients
 {
     class BaseClients
     {
-        protected static List<Client> _base = new List<Client>(); 
-
-
+        public static List<Client> _base = new List<Client>(); 
 
         public BaseClients()
         {
@@ -20,6 +18,11 @@ namespace Homework10Console.Clients
                 Client client = new Client();
                 _base.Add(client);
             }
+        }
+
+        public BaseClients(List<Client> baseClient)
+        {
+            _base = baseClient;
         }
 
         public override string ToString()

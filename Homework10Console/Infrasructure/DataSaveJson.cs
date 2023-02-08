@@ -11,11 +11,12 @@ namespace Homework10Console.Infrasructure
 {
     internal class DataSaveJson : BaseClients 
     {
-        public static void SerializeBaseJson()
+        public static List<Client> SerializeBaseJson()
         {
             string baseJson = JsonConvert.SerializeObject(_base);
             string json = baseJson;
             File.WriteAllText("base.json", json);
+            return _base;
         }
     }
 }

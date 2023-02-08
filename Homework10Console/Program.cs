@@ -2,6 +2,7 @@
 using Homework10Console.Infrasructure;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -13,14 +14,11 @@ namespace Homework10Console
     {
         static void Main(string[] args)
         {
-            BaseClients baseClients = new BaseClients();
+            List<Client> baseCompared = Application.Compare();
 
+            BaseClients baseClients = new BaseClients(baseCompared);
             Console.WriteLine(baseClients.ToString());
-
-            DataSaveJson.SerializeBaseJson();
-            DataLoadJson.DeserializeBaseJson();
-
-            Console.WriteLine(baseClients.ToString());
+            
 
             Console.ReadLine();
 

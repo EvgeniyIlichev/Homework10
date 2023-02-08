@@ -7,19 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Homework10Console.Infrasructure
 {
     internal class DataLoadJson : BaseClients 
     {
-        public static void DeserializeBaseJson()
+        public static List<Client> DeserializeBaseJson()
         {
             string json = File.ReadAllText("base.json");
-            List<Client> _base = new List<Client>();
-            _base = JsonConvert.DeserializeObject<List<Client>>(json);
-            foreach (var item in _base)
+            List<Client> _baseLoad;
+            _baseLoad = JsonConvert.DeserializeObject<List<Client>>(json);
+            bool compare;
+            foreach (var client in _baseLoad)
             {
-                BaseClients._base.Add(item);
+                compare = true;
+                for (int i = 0; i < _base.Count; i++)
+                {
+                    if (_base[i].DataPassport == client.DataPassport)
+                    {
+                        compare = false;
+                        break;
+                    }
+                }
+                if (compare)
+                {
+                    _base.Add(client);
+                }
             }
+            return _base;
         }
+        
     }
 }
