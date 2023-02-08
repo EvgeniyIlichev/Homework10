@@ -1,27 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Homework10.Models.Clients
 {
     internal class PhoneNumberClass
     {
-        public string PhoneNumber { get; set; }
+        Random random;
+        private string PhoneNumber { get; set; }
         public PhoneNumberClass()
         {
-            this.PhoneNumber = RandomPnoneNumber();
+            PhoneNumber = RandomPnoneNumber();
         }
 
         public override string ToString()
         {
             return String.Format("{0,15}",
-                this.PhoneNumber);
+                PhoneNumber);
         }
 
-        public static string RandomPnoneNumber()
+        private string RandomPnoneNumber()
         {
             string phoneNumber = "8-9";
-            Random random = new Random();
+            random = new Random();
             for (int i = 0; i < 12; i++)
             {
                 if (i == 2 || i == 6 || i == 9)
@@ -32,6 +34,7 @@ namespace Homework10.Models.Clients
                 {
                     phoneNumber += random.Next(0, 9).ToString();
                 }
+                Thread.Sleep(10);
             }
             return phoneNumber;
         }

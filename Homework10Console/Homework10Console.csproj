@@ -43,9 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clients.cs" />
-    <Compile Include="DataPassportClass.cs" />
-    <Compile Include="PhoneNumberClass.cs" />
+    <Compile Include="Clients\BaseClients.cs" />
+    <Compile Include="Clients\Client.cs" />
+    <Compile Include="Clients\DataPassportClass.cs" />
+    <Compile Include="Clients\PhoneNumberClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

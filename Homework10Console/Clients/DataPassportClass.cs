@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Homework10Console
@@ -34,6 +35,7 @@ namespace Homework10Console
                 {
                     dataPassport += random.Next(0, 9).ToString();
                 }
+                Thread.Sleep(10);
             }
             return dataPassport;
         }

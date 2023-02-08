@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework10Console
 {
-    internal class Clients
+    internal class Client
     {
         private static int id;
 
@@ -17,7 +17,7 @@ namespace Homework10Console
         public string PhoneNumber { get; set; }
         public string DataPassport { get; set; }
 
-        public Clients(
+        public Client(
             string Surname,
             string Name,
             string Patronymic,
@@ -31,7 +31,7 @@ namespace Homework10Console
             this.PhoneNumber = PhoneNumber;
             this.DataPassport = DataPassport;
         }
-        public Clients()
+        public Client()
         {
             Id = id++;
             Surname = $"Фамилия {id}";
