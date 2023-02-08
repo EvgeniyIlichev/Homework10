@@ -1,25 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Homework10.Models.Clients
+namespace Homework10Console
 {
     internal class Clients
     {
-        private int id = 0;
+        private static int id;
 
         public int Id { get; set; }
         public string Surname { get; set; }
         public string Name { get; set; }
         public string Patronymic { get; set; }
-        public PhoneNumberClass PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string DataPassport { get; set; }
 
         public Clients(
             string Surname,
             string Name,
             string Patronymic,
-            PhoneNumberClass PhoneNumber,
+            string PhoneNumber,
             string DataPassport)
         {
             Id = id++;
@@ -35,10 +37,22 @@ namespace Homework10.Models.Clients
             Surname = $"Фамилия {id}";
             Name = $"Имя {id}";
             Patronymic = $"Отчество {id}";
-            PhoneNumber = new PhoneNumberClass();
+            PhoneNumber = new PhoneNumberClass().ToString();
+            DataPassport = new DataPassportClass().ToString();
         }
 
-        
+        public override string ToString()
+        {
+            return String.Format("Id:{0,3} | Surname:{1,10} | Name:{2,6} | Patronymic:{3,14} \n PhoneNumber:{4,15} | DataPassport:{5,12}",
+                this.Id,
+                this.Surname,
+                this.Name,
+                this.Patronymic,
+                this.PhoneNumber,
+                this.DataPassport);
+        }
+
+
 
     }
 }
