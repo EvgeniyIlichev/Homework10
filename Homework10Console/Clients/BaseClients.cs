@@ -9,7 +9,7 @@ namespace Homework10Console.Clients
 {
     class BaseClients
     {
-        private List<Client> _base = new List<Client>(); 
+        protected static List<Client> _base = new List<Client>(); 
 
 
 

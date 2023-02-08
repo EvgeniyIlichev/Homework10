@@ -1,4 +1,5 @@
 ﻿using Homework10Console.Clients;
+using Homework10Console.Infrasructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,8 @@ namespace Homework10Console
             BaseClients baseClients = new BaseClients();
 
             Console.WriteLine(baseClients.ToString());
+
+            DataSaveJson.SerializeOrganizationJson();
 
             Console.ReadLine();
 
