@@ -46,13 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clients\BaseClients.cs" />
-    <Compile Include="Clients\Client.cs" />
-    <Compile Include="Clients\DataPassportClass.cs" />
-    <Compile Include="Clients\PhoneNumberClass.cs" />
+    <Compile Include="Models\Clients\BaseClients.cs" />
+    <Compile Include="Models\Clients\Client.cs" />
+    <Compile Include="Models\Clients\DataPassportClass.cs" />
+    <Compile Include="Models\Clients\PhoneNumberClass.cs" />
     <Compile Include="Infrasructure\Application.cs" />
     <Compile Include="Infrasructure\DataLoadJson.cs" />
     <Compile Include="Infrasructure\DataSaveJson.cs" />
+    <Compile Include="Models\Interface\IPersonnel.cs" />
+    <Compile Include="Models\Personnel\Consultant.cs" />
+    <Compile Include="Models\Personnel\Manager.cs" />
+    <Compile Include="Models\Personnel\Personnel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,5 +64,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

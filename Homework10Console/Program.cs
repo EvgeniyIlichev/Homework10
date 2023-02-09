@@ -1,5 +1,6 @@
 ﻿using Homework10Console.Clients;
 using Homework10Console.Infrasructure;
+using Homework10Console.Models.Personnel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,10 +15,8 @@ namespace Homework10Console
     {
         static void Main(string[] args)
         {
-            List<Client> baseCompared = Application.Compare();
-
-            BaseClients baseClients = new BaseClients(baseCompared);
-            Console.WriteLine(baseClients.ToString());
+            
+            Console.WriteLine(Consultant.viewdata);
             
 
             Console.ReadLine();
