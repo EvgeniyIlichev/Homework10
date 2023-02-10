@@ -17,22 +17,10 @@ namespace Homework10Console.Infrasructure
             string json = File.ReadAllText("base.json");
             List<Client> _baseLoad;
             _baseLoad = JsonConvert.DeserializeObject<List<Client>>(json);
-            bool compare;
+            _base.Clear();
             foreach (var client in _baseLoad)
             {
-                compare = true;
-                for (int i = 0; i < _base.Count; i++)
-                {
-                    if (_base[i].DataPassport == client.DataPassport)
-                    {
-                        compare = false;
-                        break;
-                    }
-                }
-                if (compare)
-                {
-                    _base.Add(client);
-                }
+                 _base.Add(client);
             }
             return _base;
         }

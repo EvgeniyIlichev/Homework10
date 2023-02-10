@@ -8,22 +8,24 @@ using System.Threading.Tasks;
 
 namespace Homework10Console.Infrasructure
 {
-    class Application
+    class LoadOrSaveFile : BaseClients
     {
-        public static List<Client> Compare()
+        
+        public static List<Client> FileExistenceCheck()
         {
-            List<Client> baseClient;
             string adressBase = @"..\Debug\base.json";
             if (!File.Exists(adressBase)) 
             {
+                List<Client> baseClient;
                 BaseClients baseClients = new BaseClients();
                 baseClient = DataSaveJson.SerializeBaseJson();
+                return baseClient;
             }
             else
             {
-                baseClient = DataLoadJson.DeserializeBaseJson();
+                _base = DataLoadJson.DeserializeBaseJson();
+                return _base;
             }
-            return baseClient;
         }
     }
 }

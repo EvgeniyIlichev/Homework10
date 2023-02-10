@@ -15,9 +15,9 @@ namespace Homework10Console
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine(Consultant.viewdata);
-            
+            Console.WriteLine(Manager.baseWithHiddenPassportData);
+            Console.WriteLine(Consultant.baseWithHiddenPassportData);
+            Console.WriteLine(Manager.baseWithHiddenPassportData);
 
             Console.ReadLine();
 

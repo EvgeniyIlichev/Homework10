@@ -50,7 +50,7 @@
     <Compile Include="Models\Clients\Client.cs" />
     <Compile Include="Models\Clients\DataPassportClass.cs" />
     <Compile Include="Models\Clients\PhoneNumberClass.cs" />
-    <Compile Include="Infrasructure\Application.cs" />
+    <Compile Include="Infrasructure\LoadOrSaveFile.cs" />
     <Compile Include="Infrasructure\DataLoadJson.cs" />
     <Compile Include="Infrasructure\DataSaveJson.cs" />
     <Compile Include="Models\Interface\IPersonnel.cs" />

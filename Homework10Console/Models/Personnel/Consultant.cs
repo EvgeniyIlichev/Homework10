@@ -11,19 +11,21 @@ namespace Homework10Console.Models.Personnel
 {
     internal class Consultant : Personnel
     {
-        public readonly static string viewdata = HidePassportData().ToString();
-
-        public static BaseClients HidePassportData()
+        public readonly static string baseWithHiddenPassportData = HidingPassportData().ToString();
+        /// <summary>
+        /// Скрытие паспортных данных
+        /// </summary>
+        /// <returns></returns>
+        public static BaseClients HidingPassportData()
         {
-            List<Client> baseCompared = Application.Compare();
-
-            foreach (var client in baseCompared)
+            List<Client> listClients = LoadOrSaveFile.FileExistenceCheck();
+            foreach (var client in listClients)
             {
                 client.DataPassport = "** ** ******";
             }
-
-            BaseClients baseClients = new BaseClients(baseCompared);
-            return baseClients;
+            BaseClients baseClientsWithHiddenPassportData = new BaseClients(listClients);
+            return baseClientsWithHiddenPassportData;
+            
         }
         
     }
