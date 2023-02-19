@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrasructure\Application.cs" />
     <Compile Include="Models\Clients\BaseClients.cs" />
     <Compile Include="Models\Clients\Client.cs" />
     <Compile Include="Models\Clients\DataPassportClass.cs" />

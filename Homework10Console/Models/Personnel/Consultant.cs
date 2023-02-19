@@ -27,6 +27,40 @@ namespace Homework10Console.Models.Personnel
             return baseClientsWithHiddenPassportData;
             
         }
-        
+
+        public static void Menu()
+        {
+            bool exit = true;
+            while (exit)
+            {
+                Console.Write(@"Что делать ? 
+0 - Cохранить 
+1 - Добавить 
+2 - Удалить 
+3 - Показать 
+4 - Импорт 
+5 - Выход 
+6 - Сортировка 
+7 - Редактировать 
+");
+                switch (Console.ReadLine())
+                {
+                    case "0": break;
+                    case "1": break;
+                    case "2": break;
+                    case "3": Console.WriteLine(baseWithHiddenPassportData); break;
+                    case "4": break;
+                    case "5": exit = false; break;
+                    case "6": break;
+                    case "7":
+                        {
+                            break;
+                        }
+                    default:
+                        Console.WriteLine("Угу, так и сделаем");
+                        break;
+                }
+            }
+        }
     }
 }
