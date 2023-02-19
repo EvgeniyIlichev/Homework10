@@ -34,6 +34,7 @@ namespace Homework10Console.Models.Personnel
             bool idBool = false;
             string phoneNumber;
             
+            //Выполняется пока не совпадет айди
             while(!idBool)
             {
                 Console.WriteLine(@"Введите ID клиента, номер телефона которого хотите изменить?
@@ -49,6 +50,7 @@ namespace Homework10Console.Models.Personnel
                     if(client.Id == idInt)
                     {
                         bool lengthNumber = false;
+                        //Выполняется пока длина вводимого номера не будет соотвествовать неободимому формату
                         while (!lengthNumber)
                         {
                             Console.WriteLine(@"Введите номер телефона(11 цифр в формате 89181234567)

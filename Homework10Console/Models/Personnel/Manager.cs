@@ -10,7 +10,7 @@ namespace Homework10Console.Models.Personnel
 {
     internal class Manager : Personnel
     {
-        public readonly static string viewBaseData = ViewBaseData().ToString();
+        private static string viewBaseData = ViewBaseData().ToString();
         /// <summary>
         /// Скрытие паспортных данных
         /// </summary>
