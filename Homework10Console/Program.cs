@@ -16,9 +16,6 @@ namespace Homework10Console
         static void Main(string[] args)
         {
             Application.Start();
-
-            Console.ReadLine();
-
         }
 
         

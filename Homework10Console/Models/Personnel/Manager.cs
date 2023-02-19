@@ -28,28 +28,24 @@ namespace Homework10Console.Models.Personnel
             while (exit)
             {
                 Console.Write(@"Что делать ? 
-0 - Cохранить 
-1 - Добавить 
-2 - Удалить 
-3 - Показать 
-4 - Импорт 
-5 - Выход 
-6 - Сортировка 
-7 - Редактировать 
+0 - Показать
+1 - Cохранить 
+2 - Загрузить 
+3 - Изменить номер телефона  
+4 - Выход 
 ");
                 switch (Console.ReadLine())
                 {
-                    case "0": break;
-                    case "1": break;
-                    case "2": break;
-                    case "3": Console.WriteLine(Manager.viewBaseData); break;
-                    case "4": break;
-                    case "5": exit = false; break;
-                    case "6": break;
-                    case "7":
+                    case "0": Console.WriteLine(viewBaseData); break;
+                    case "1":
                         {
-                            break;
+                            DataSaveJson.SerializeBaseJson();
+                            Console.WriteLine("Base saved");
+                            break; 
                         }
+                    case "2": break;
+                    case "3": break;
+                    case "4": exit = false; break;
                     default:
                         Console.WriteLine("Угу, так и сделаем");
                         break;

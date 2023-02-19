@@ -40,5 +40,24 @@ namespace Homework10Console
             }
             return phoneNumber;
         }
+
+        public static string InputPhoneNumber(char[] phoneNumberChar)
+        {
+            string newPhoneNumber = string.Empty;
+            for (int i = 0; i < phoneNumberChar.Length; i++)
+            {
+                if (i == 0 || i == 3 || i == 6 || i == 8)
+                {
+                    newPhoneNumber += phoneNumberChar[i];
+                    newPhoneNumber += "-";
+                }
+                else
+                {
+                    newPhoneNumber += phoneNumberChar[i];
+                }
+                Thread.Sleep(10);
+            }
+            return newPhoneNumber;
+        }
     }
 }

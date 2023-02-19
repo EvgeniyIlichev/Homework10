@@ -16,16 +16,13 @@ namespace Homework10Console.Infrasructure
             string adressBase = @"..\Debug\base.json";
             if (!File.Exists(adressBase)) 
             {
-                List<Client> baseClient;
                 BaseClients baseClients = new BaseClients();
-                baseClient = DataSaveJson.SerializeBaseJson();
-                return baseClient;
-            }
-            else
-            {
-                _base = DataLoadJson.DeserializeBaseJson();
+                DataSaveJson.SerializeBaseJson();
                 return _base;
             }
+                _base = DataLoadJson.DeserializeBaseJson();
+                return _base;
+            
         }
     }
 }
