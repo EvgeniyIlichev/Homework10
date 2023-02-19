@@ -63,8 +63,6 @@ namespace Homework10Console.Models.Personnel
                             {
                                 client.PhoneNumber = PhoneNumberClass.InputPhoneNumber(phoneNumberChar);
                                 Console.WriteLine("Номер изменен");
-                                DataSaveJson.SerializeBaseJson();
-                                LoadOrSaveFile.FileExistenceCheck();
                                 break;
                             }
                             else
