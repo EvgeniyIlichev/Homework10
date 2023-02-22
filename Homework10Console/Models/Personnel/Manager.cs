@@ -10,9 +10,8 @@ namespace Homework10Console.Models.Personnel
 {
     internal class Manager : Personnel
     {
-        private static string viewBaseData = ViewBaseData().ToString();
         /// <summary>
-        /// Скрытие паспортных данных
+        /// Просмотр данных
         /// </summary>
         /// <returns></returns>
         public static BaseClients ViewBaseData()
@@ -36,7 +35,7 @@ namespace Homework10Console.Models.Personnel
 ");
                 switch (Console.ReadLine())
                 {
-                    case "0": Console.WriteLine(viewBaseData); break;
+                    case "0": Console.WriteLine(ViewBaseData().ToString()); break;
                     case "1":
                         {
                             DataSaveJson.SerializeBaseJson();
